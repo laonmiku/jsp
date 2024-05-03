@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+
 *{
-	font-family: "Single Day", cursive;
+	 font-family: "Sunflower", sans-serif;
 }
 
 h1{

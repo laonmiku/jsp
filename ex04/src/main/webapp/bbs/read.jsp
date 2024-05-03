@@ -10,12 +10,14 @@
 		<button class="btn-sm btn btn-danger px-3 delete" >삭제</button>
 	</div>
 	<div class="card">
+		<div class="card-header">
+			<div> [ ${bbs.bid} ]  ${bbs.title} </div>
+		</div>
 		<div class="card-body">
-			<div> ${bbs.title} </div>
-			<hr>
 			<div> ${bbs.contents} </div>
 		</div>
-		<div class="card-footer text-muted text-end">
+		<div class="card-footer  text-muted text-end">
+			
 			<span>${bbs.bdate}</span>
 			<br/>
 			<span>작성자 : ${bbs.uname} (${bbs.writer})</span>
@@ -23,6 +25,7 @@
 	</div>
 </div>
 
+<jsp:include page="/bbs/comments.jsp"/>
 	
 
 			

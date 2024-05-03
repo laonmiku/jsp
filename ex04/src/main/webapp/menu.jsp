@@ -4,7 +4,8 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-    	<span class="navbar-brand text-bg-dark rounded-pill text-lg">홍길똥</span>
+    	<span class="navbar-brand text-lg text-bg-secondary  rounded "><b><i class="bi bi-globe mx-2 mt-2 " 
+    		style="color:white;" ></i></b></span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -12,10 +13,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">회사소개</a>
+          <a class="nav-link active" aria-current="page" href="/"> 회사소개  </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/user/list">사용자목록</a>
+          <a class="nav-link active" aria-current="page" href="/user/list"> 사용자목록</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/bbs/list">게시판</a>
@@ -26,10 +27,10 @@
           <a class="nav-link active" aria-current="page" href="/user/login">로그인</a>
         </li>
          <li class="nav-item" id="uid">
-          <a class="nav-link active text-bg-dark rounded-pill hide" aria-current="page" href="/user/mypage"></a>
+          <a class="nav-link active  hide text-bg-secondary rounded" aria-current="page" href="/user/mypage"></a>
         </li>
         <li class="nav-item" id="logout">
-          <a class="nav-link active" aria-current="page" href="/user/logout">로그아웃</a>
+          <a class="nav-link active" aria-current="page" href="/user/logout"> 로그아웃</a>
         </li>
       </ul>
     </div>
