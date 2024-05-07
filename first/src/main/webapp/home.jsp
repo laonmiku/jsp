@@ -8,6 +8,7 @@
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
  	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
 	<link rel="stylesheet" href="/css/style.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js"></script>
 	<meta charset="UTF-8">
 	<title>홈페이지</title>
 </head>
