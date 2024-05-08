@@ -12,7 +12,10 @@
     <fullyQualifiedTypeName name="javax.naming.spi.DirStateFactory.Result"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="org.apache.catalina.tribes.group.Response"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="model.StuDAOImpl"/>
+    <fullyQualifiedTypeName name="javax.xml.namespace.QName"/>
+    <fullyQualifiedTypeName name="model.QueryVO"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
