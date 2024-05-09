@@ -119,26 +119,31 @@
       });
    }
    
-   function getTotal(){
-      $.ajax({
-         type:"get",
-         url:"/stu/total",
-         data:{key , word},
-         success: function(data){
-            if(data==0){
-               alert("검색내용이 없습니다");
-               return;
-            }
-            const totalPage= Math.ceil(data/size);
-            $("#pagination").twbsPagination("changeTotalPages", totalPage, page);
-            if(data > size){
-               $("#pagination").show();
-            }else{
-               $("#pagination").hide();
-            }
-         }
-      });
-   };
+   function getTotal() {
+	      $.ajax({
+	         type : "get",
+	         url : "/stu/total",
+	         data : {key, word},
+	         success : function (data){
+	            $("#total").html(data);
+	            if(data==0) {
+	               alert("검색 내용이 없습니다.");
+	               return;
+	            }
+	            const totalPage=Math.ceil(data/size);
+	            $("#pagination").twbsPagination("changeTotalPages", totalPage, page);
+	            
+	            alert(data + "/" + size);
+	            if(parseInt(data)>size) {   
+	               $("#pagination").show();
+	            }
+	            else{
+	               $("#pagination").hide();
+	            }
+	         }
+	      });
+	      
+	   }
    
    
    $('#pagination').twbsPagination({
