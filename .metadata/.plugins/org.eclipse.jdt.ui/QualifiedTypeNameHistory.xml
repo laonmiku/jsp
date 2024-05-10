@@ -14,9 +14,13 @@
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="model.StuDAOImpl"/>
     <fullyQualifiedTypeName name="javax.xml.namespace.QName"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="model.CouDAOImpl"/>
     <fullyQualifiedTypeName name="model.QueryVO"/>
     <fullyQualifiedTypeName name="com.google.gson.Gson"/>
+    <fullyQualifiedTypeName name="javax.servlet.jsp.tagext.TryCatchFinally"/>
+    <fullyQualifiedTypeName name="java.rmi.registry.LocateRegistry"/>
+    <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.Catch"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="model.GradeVO"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 </qualifiedTypeNameHistroy>
