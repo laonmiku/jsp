@@ -9,18 +9,18 @@
     <fullyQualifiedTypeName name="model.UserVO"/>
     <fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
     <fullyQualifiedTypeName name="javax.naming.spi.DirStateFactory.Result"/>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="org.apache.catalina.tribes.group.Response"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="model.StuDAOImpl"/>
     <fullyQualifiedTypeName name="javax.xml.namespace.QName"/>
     <fullyQualifiedTypeName name="model.CouDAOImpl"/>
     <fullyQualifiedTypeName name="model.QueryVO"/>
-    <fullyQualifiedTypeName name="com.google.gson.Gson"/>
     <fullyQualifiedTypeName name="javax.servlet.jsp.tagext.TryCatchFinally"/>
     <fullyQualifiedTypeName name="java.rmi.registry.LocateRegistry"/>
     <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.Catch"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="model.GradeVO"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="com.google.gson.Gson"/>
 </qualifiedTypeNameHistroy>

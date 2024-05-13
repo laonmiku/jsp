@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 
 import model.*;
 
-@WebServlet(value={"/enroll/list.json","/enroll/slist.json","/enroll/insert","/enroll/delete"})
+@WebServlet(value={"/enroll/update","/enroll/list.json","/enroll/slist.json","/enroll/insert","/enroll/delete"})
 public class EnrollServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     EnrollDAO dao=new EnrollDAO();
@@ -47,6 +47,12 @@ public class EnrollServlet extends HttpServlet {
 			scode= request.getParameter("scode");
 			lcode= request.getParameter("lcode");
 			out.print(dao.delete(scode, lcode));
+			break;
+		case "/enroll/update":
+			scode= request.getParameter("scode");
+			lcode= request.getParameter("lcode");
+			int grade= Integer.parseInt(request.getParameter("grade"));
+			dao.update(scode,lcode,grade);
 			break;
 		}
 	}
