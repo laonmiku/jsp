@@ -30,6 +30,7 @@
  <div>
  	<h1>강좌관리</h1>
  	<div class="row">
+ 		
  		<div class="col-8 col-md-6">
  			<form name="frm">
  				<div class="input-group mb-2">
@@ -84,7 +85,6 @@
 <script>
 	let page=1;
 	let size=$("#size").val();
-	let key=$(frm.key).val();
 	let word=$(frm.word).val();
 	
 	$("#size").on("change", function(){
@@ -97,11 +97,10 @@
 	$(frm).on("submit",function(e){
 		e.preventDefault();
 		page=1;
-		key=$(frm.key).val();
 		word=$(frm.word).val();
 		//getData();
 		getTotal();
-	})
+	});
 	
 	getTotal();
 	//getData();
