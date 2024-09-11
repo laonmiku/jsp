@@ -1,5 +1,7 @@
+IMPORT_FILES_AND_FOLDERS_RELATIVE=true
+IMPORT_FILES_AND_FOLDERS_TYPE=23,1
 SAVE_ALL_BEFORE_BUILD=true
 eclipse.preferences.version=1
-platformState=1715962321842107
+platformState=1776106595319098
 quickStart=false
 tipsAndTricks=true

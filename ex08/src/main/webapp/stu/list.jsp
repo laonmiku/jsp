@@ -47,10 +47,9 @@
        </form>
        <div class="col w-25 ">
           <select class="form-select" id="size">
-             <option value="2">2행</option>
-             <option value="3">3행</option>
-             <option value="4">4행</option>
-             <option value="5">5행</option>
+            <option value="3">3행</option>
+			<option value="5" selected>5행</option>
+			<option value="10">10행</option>
           </select>
        </div>
     </div>
