@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     
 <style>
 .page-link {
@@ -30,7 +31,14 @@
 </style>
     
 <div>
-   <h1>학생관리</h1>
+   <c:choose>
+    <c:when test="${uid == 'admin'}">
+        <h1>학생관리</h1>
+    </c:when>
+    <c:otherwise>
+        <h1>학생목록</h1>
+    </c:otherwise>
+	</c:choose>
    <div class="row mt-5 mb-3">
        <form class="col-10 col-md-6" name="frm">
           <div class="input-group">

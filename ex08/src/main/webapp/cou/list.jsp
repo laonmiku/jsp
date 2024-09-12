@@ -1,12 +1,44 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <style>
-	#size {
-		width:100px;
-		float:right;
-	}
+.page-link {
+  color: #000; 
+  background-color: #fafafa;
+  border: 1px solid #ccc ; 
+}
+
+.page-item.active .page-link {
+ z-index: 1;
+ color: #000;
+ font-weight:bold;
+ background-color: #fff;
+ border: 1px solid ;
+ 
+}
+
+.page-link:focus, .page-link:hover {
+  color: #000;
+  background-color: #fafafa; 
+  border-color: #ccc;
+}
+
+#size {
+   width:100px;
+   float:right;
+}
 </style>
+
 <div>
-	<h1>강좌관리</h1>
+	<c:choose>
+    <c:when test="${uid == 'admin'}">
+        <h1>강좌관리</h1>
+    </c:when>
+    <c:otherwise>
+        <h1>강좌목록</h1>
+    </c:otherwise>
+	</c:choose>
+	
 	<div class="row">
 		<div class="col-8 col-md-6">
 			<form name="frm">
@@ -18,7 +50,7 @@
 						<option value="room">강의실</option>
 					</select>
 					<input name="word" placeholder="검색어" class="form-control ms-2">
-					<button class="btn btn-primary">검색</button>
+					<button class="btn btn-dark">검색</button>
 					<span id="total" class="mt-2 ms-3"></span>
 				</div>
 			</form>

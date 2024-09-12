@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <style>
 	table .title{
@@ -30,10 +31,12 @@
 				<td><fmt:formatNumber pattern="#,###" value="${pro.salary}"/></td>
 			</tr>
 		</table>
-		<div class="text-center">
-			<button class="btn  border border-info me-3" id="update">정보수정</button>
-			<button class="btn border border-danger" id="delete">정보삭제</button>
-		</div>
+		<c:if test="${uid == 'admin'}">
+			<div class="text-center">
+				<button class="btn  border border-info me-3" id="update">정보수정</button>
+				<button class="btn border border-danger" id="delete">정보삭제</button>
+			</div>
+		</c:if>
 	</div>
 </div>   
 <jsp:include page="info.jsp"/>

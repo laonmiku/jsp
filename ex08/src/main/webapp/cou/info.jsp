@@ -1,17 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
 <div class="mt-3">
 	<h3 class="text-center">-수강 학생 목록-</h3>
 	<div id="div_stu" class=""></div>
 </div>
 <script id="temp_stu" type="x-handlebars-template">
-   <div class="mb-2 text-end mx-5">
+	<c:if test="${uid == 'admin'}">
+   	<div class="mb-2 text-end mx-5">
 		<button class="btn  border border-dark px-4" id="update">점수저장</button>
 	</div>
+	</c:if>
 	
 	<table  class=" table table-striped">
       <tr class="table-dark text-center">
-		 <td><input type="checkbox" id="all"></td>
+		<c:if test="${uid == 'admin'}">
+ 			<td><input type="checkbox" id="all"></td>
+		</c:if>
          <td>학생 번호</td>
          <td>학생 이름</td>
          <td>학생 학과</td>
@@ -21,15 +27,22 @@
       </tr>
       {{#each .}}
          <tr class="text-center" scode="{{scode}}">
- 			<td><input type="checkbox" class="chk"></td>
+			<c:if test="${uid == 'admin'}">
+ 				<td><input type="checkbox" class="chk"></td>
+			</c:if>
             <td>{{scode}}</td>
             <td><a href="/stu/read?scode={{scode}}">{{sname}}</a></td>
             <td>{{sdept}}</td>
             <td>{{year}}학년</td>
 		  	<td>{{edate}}</td>
 		    <td scode="{{scode}}" >
-				<input value="{{grade}}" size=2 class="text-center px-2 grade">점
-				<button class="btn btn-sm btn-secondary update">수정</button>
+				<c:if test="${uid == 'admin'}">
+					<input value="{{grade}}" size=2 class="text-center px-2 grade">점
+					<button class="btn btn-sm btn-secondary update">수정</button>
+				</c:if>
+				<c:if test="${uid != 'admin'}">
+					 <span class="text-center px-2 ">{{grade}}점</span>
+				</c:if>
 			</td>
          </tr>
       {{/each}}

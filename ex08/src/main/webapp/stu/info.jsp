@@ -1,12 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   
 <div>
 <hr>
 	<h3 class="text-center mb-3">-수강신청목록-</h3>
 	 <div class="input-group col-6 mb-2">
-        <div id="div_cou"></div>
-        <button class="btn btn-light  border" id="insert">수강신청</button>   
+	 	<c:if test="${uid == 'admin'}">
+        	<div id="div_cou"></div>
+        </c:if>
+        <c:if test="${uid == 'admin'}">
+        	<button class="btn btn-light  border" id="insert">수강신청</button>
+       	</c:if>   
      </div>
      <div id="div_enroll"></div>
 </div>
@@ -20,7 +26,9 @@
 			<td>신청인원</td>
 			<td>담당교수</td>
 			<td>신청일</td>
-			<td>취소</td>
+			<c:if test="${uid == 'admin'}">
+				<td>취소</td>
+			</c:if>
 		</tr>
 		{{#each .}}
 		<tr class="text-center">
@@ -29,9 +37,11 @@
 			<td>{{hours}}</td>
 			<td>{{room}}</td>
 			<td>{{persons}}/{{capacity}}</td>
-			<td>{{pname}}({{pcode}})</td>
+			<td>{{pname}}</td>
 			<td>{{edate}}</td>
-			<td><button class="btn border border-danger delete" lcode="{{lcode}}"><i class="bi bi-person-fill-dash"></i></button></td>
+			<c:if test="${uid == 'admin'}">
+				<td><button class="btn border border-danger delete" lcode="{{lcode}}"><i class="bi bi-person-fill-dash"></i></button></td>
+			</c:if>
 		</tr>
 		{{/each}}
 	</table>

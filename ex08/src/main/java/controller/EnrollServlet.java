@@ -27,9 +27,9 @@ public class EnrollServlet extends HttpServlet {
 		case "/enroll/list.json": //테스트 /enroll/list.json?scode=92414029
 			out.print(gson.toJson(dao.list(request.getParameter("scode"))));
 			break;
-		case "/enroll/slist.json": //테스트 /enroll/slist.json?lcode=C301
+		case "/enroll/slist.json": //테스트 /enroll/slist.json?lcode=C301	
 			out.print(gson.toJson(dao.slist(request.getParameter("lcode"))));
-			break;	
+			break;
 		}
 	}
 

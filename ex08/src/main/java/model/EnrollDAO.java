@@ -110,7 +110,6 @@ public class EnrollDAO {
 			vo.setEdate(rs.getString("edate"));
 			vo.setGrade(rs.getInt("grade"));
 			vo.setPname(rs.getString("pname"));
-			vo.setPcode(rs.getString("pcode"));
 			System.out.println(vo.toString());
 			array.add(vo);
 		}
