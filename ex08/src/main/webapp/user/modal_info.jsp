@@ -21,13 +21,11 @@
 					aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<input id="uname" class="form-control mb-1" placeholder="이름" value="${user.uname}">
-				<input id="phone" class="form-control  mb-1" placeholder="전화번호" value="${user.phone}">
-        	<div class="input-group mb-1">
-	        	<input id="address1" class="form-control " value="${user.address1}">
-	        	<button class="btn btn-success">검색</button>
-        	</div>
-        	    <input id="address2" class="form-control " placeholder="상세주소" value="${user.address2}">
+				<div class="input-group mb-3">
+				  <span class="input-group-text mb-1" id="basic-addon1">name</span>
+				  <input id="uname" class="form-control mb-1" placeholder="이름" value="${user.uname}">
+				</div>
+				
         	</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -51,7 +51,7 @@
 					</select>
 					<input name="word" placeholder="검색어" class="form-control ms-2">
 					<button class="btn btn-dark">검색</button>
-					<span id="total" class="mt-2 ms-3"></span>
+						 <span id="total" class="mt-2 ms-2 p-1 border border-secondary-subtle text-body-secondary rounded-2"></span>
 				</div>
 			</form>
 		</div>
@@ -139,7 +139,7 @@
 					$(frm.word).val("");
 					return;
 				}
-				$("#total").html("검색수: " + total);
+				$("#total").html("검색결과 : "+total+"건");
 				let totalPage=Math.ceil(total/size);
 				$("#pagination").twbsPagination("changeTotalPages", totalPage, page);
 				
@@ -151,7 +151,6 @@
 			}
 		});
 	}
-	
 	$('#pagination').twbsPagination({
 		totalPages:10, 
 		visiblePages: 5, 

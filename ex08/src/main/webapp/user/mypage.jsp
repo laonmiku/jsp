@@ -9,6 +9,10 @@
 		border: 1px solid gray;
 		cursor: pointer; 
 	}
+	.date {
+	 font-size : 0.8rem;
+	 color : gray;
+	}
 </style>
 
 <div class="row justify-content-center">
@@ -17,53 +21,35 @@
 		<div class="card">
 			<div class="card-body">
 				<div>
-					<img id="imgPhoto" src="" width="50">
-					<span>이름: ${user.uname} ( ${user.uid} )</span>
+					<span> 이름: ${user.uname} ( ${user.uid} )</span>
 					<button class="btn  btn-secondary btn-sm ms-3" id="btnPass">비밀번호변경</button>
 					<hr>
-				</div>                               
-				<div class="mb-3">
-					주소: ${user.address1} ( ${user.address2} )
-					<hr>
+				</div>   
+				<div>
+					<div class="w-100" >${user.memo}</div>
 				</div>
-				<div class="mb-3">
-					전화번호: ${user.phone}
-					<hr>
+				<hr/>
+				<div class="row">
+					<div class=" col date">
+						가입일 : <fmt:formatDate value="${user.jdate}" pattern="yyyy년MM월dd일 HH:ss"/>
+					</div>
+					<div class=" col date">
+						수정일 : <fmt:formatDate value="${user.udate}" pattern="yyyy년MM월dd일 HH:ss"/>
+					</div>
 				</div>
-				<div class="mb-3">
-					가입일 : <fmt:formatDate value="${user.jdate}" pattern="yyyy년MM월dd일 HH:ss"/>
-					<hr>
-				</div>
-				<div class="mb-3">
-					수정일 : <fmt:formatDate value="${user.udate}" pattern="yyyy년MM월dd일 HH:ss"/>
-				<hr>
-				</div>
+				<hr/>
 				<div class="text-center my-3">
-					<button class="btn btn-success px-5" id="btnInfo">정보수정</button>
+					<button class="btn btn-success px-5" id="btnInfo">수정</button>
 				</div>
 			</div>
 		</div>
 	</div>
 	<jsp:include page="modal_info.jsp"/>
 	<jsp:include page="modal_pass.jsp"/>
-	<jsp:include page="modal_photo.jsp"/>
 </div>
 
 <script>
-	//프로필사진
-	  const photo ="${user.photo}";
-	  //alert(photo);가져옴 ㅇㅋ,,
-   if(photo) {
-      $("#imgPhoto").attr("src", photo);
-      $("#photo").attr("src", photo);
-   }else {
-      $("#imgPhoto").attr("src", "http://via.placeholder.com/50x50");
-      $("#photo").attr("src", "http://via.placeholder.com/200x200");
-   }
-
-
-
-
+	
 	$("#btnInfo").on("click",function(){
 		$("#modalInfo").modal("show");
 	});//부트스트랩메소드

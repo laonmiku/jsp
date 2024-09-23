@@ -16,10 +16,7 @@ public class UserDAO {
 				UserVO vo=new UserVO();
 				vo.setUid(rs.getString("uid"));
 				vo.setUname(rs.getString("uname"));
-				vo.setPhoto(rs.getString("photo"));
-				vo.setPhone(rs.getString("phone"));
-				vo.setAddress1(rs.getString("address1"));
-				vo.setAddress2(rs.getString("address2"));
+				vo.setMemo(rs.getString("memo"));
 				vo.setJdate(rs.getTimestamp("jdate"));
 				array.add(vo);
 			}
@@ -43,19 +40,6 @@ public class UserDAO {
 		}
 	}
 	
-	//사진업로드
-	public void uploadPhoto(String uid, String photo) {
-		try {
-			String sql="update users set photo=? where uid=?";
-			PreparedStatement ps=con.prepareStatement(sql);
-			ps.setString(1, photo);
-			ps.setString(2, uid);
-			ps.execute();
-		} catch (Exception e) {
-			System.out.println("사진업데이트:"+e.toString());
-		}
-	}
-	
 	//비밀번호수정,, 메소드이름이같아도 매개변수타입이 다르면 ㄱㅊ음(스트링두개.스트랭한개) =>오버로딩
 	public void update(String uid,String npass) {
 		try {
@@ -72,13 +56,11 @@ public class UserDAO {
 	//정보수정
 	public void update(UserVO vo) {
 		try {
-			String sql="update users set udate=now(), uname=?,phone=?,address1=?,address2=? where uid=?";
+			String sql="update users set udate=now(), uname=?,memo=? where uid=?";
 			PreparedStatement ps=con.prepareStatement(sql);
 			ps.setString(1, vo.getUname());
-			ps.setString(2, vo.getPhone());
-			ps.setString(3, vo.getAddress1());
-			ps.setString(4, vo.getAddress2());
-			ps.setString(5, vo.getUid());
+			ps.setString(2, vo.getMemo());
+			ps.setString(3, vo.getUid());
 			
 			ps.execute();
 		} catch (Exception e) {
@@ -97,10 +79,7 @@ public class UserDAO {
 				vo.setUid(rs.getString("uid"));
 				vo.setUpass(rs.getString("upass"));
 				vo.setUname(rs.getString("uname"));
-				vo.setPhone(rs.getString("phone"));
-				vo.setAddress1(rs.getString("address1"));
-				vo.setAddress2(rs.getString("address2"));
-				vo.setPhoto(rs.getString("photo"));
+				vo.setMemo(rs.getString("memo"));
 				vo.setJdate(rs.getTimestamp("jdate"));
 				vo.setUdate(rs.getTimestamp("udate"));
 			}

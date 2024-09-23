@@ -61,7 +61,7 @@
 			<ul class="navbar-nav mb-2 mb-lg-0 ">
 				<c:if test="${sessionScope.uid == null}">
 					<li class="nav-item" id="login"><a class="nav-link"
-						aria-current="page" href="/user/login">로그인</a></li>
+						aria-current="page" href="/user/login">관리자용</a></li>
 				</c:if>
 				<c:if test="${sessionScope.uid != null}">
 					<li class="nav-item" id="uid"><a

@@ -77,22 +77,6 @@ public class UserServlet extends HttpServlet {
 					dao.insert(user);
 					break;
 				
-				//사진업로드
-				case "/user/upload":
-					String path="/upload/photo/";//얘는 사진저자오디는경로패스임!
-					MultipartRequest multi =new MultipartRequest(
-						request,
-						"c:"+ path,//그래서 씨에 업로드>포토 에 저장한ㄴ단거!
-						1024*1024*10, //사진크기막아줌
-						new DefaultFileRenamePolicy()//파일이름 알아서 중복안되게해줌
-					);
-					String fileName=multi.getFilesystemName("photo");
-					String uid2=multi.getParameter("uid");
-					System.out.println("파일이름:" + fileName+"\n아이디:"+uid2);
-					String photo = path+ fileName;
-					dao.uploadPhoto(uid2, photo);
-					break;
-				
 				//비밀번호업데이트,,
 				case"/user/update/pass":
 					String uid1=request.getParameter("uid");
@@ -105,14 +89,12 @@ public class UserServlet extends HttpServlet {
 					UserVO vo=new UserVO();
 					String uid=request.getParameter("uid");
 					vo.setUid(uid);
-					vo.setPhone(request.getParameter("phone"));
+					vo.setMemo(request.getParameter("memo"));
 					vo.setUname(request.getParameter("uname"));
-					vo.setAddress1(request.getParameter("address1"));
-					vo.setAddress2(request.getParameter("address2"));
-					
 					System.out.println (vo.toString());
 					dao.update(vo);//데이터베이스에 업데이트
 					break;
+					
 		case "/user/login":
 			 uid=request.getParameter("uid");
 			String upass=request.getParameter("upass");
